@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+
+.btn {
+    @apply py-4 px-2 text-white bg-purple-900 rounded-lg hover:bg-sky-500 hover:text-black
+}
+/* we are writing @apply to just apply all the tailwind directive written to
+multiple component using a custom class.
+
+It is mainly useful while having a compnent of same style but a lot of it 
+example a calculator.*/
+
+@tailwind utilities;
