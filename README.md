@@ -34,3 +34,21 @@ Adding Custom Classes After Utility Layer:
         Accidental Overrides: Utilities could unintentionally override custom styles, leading to unexpected results. 
 */
 ```
+Now imagine if we write more and more custom classes it will all end up in clutter so to fix it we will use the @layer directive so that we don't have to add the code between the layers but we can define which custom class belongs to which layer inside Tailwind CSS which results in much more cleaner code
+
+```
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+/* Base layer styles */
+}
+
+@layer components {
+/* Component styles */
+  .btn-sm {
+      @apply text-sm py-4 px-2 text-white bg-purple-900 rounded-lg hover:bg-sky-500 hover:text-black
+  }
+}
+```
